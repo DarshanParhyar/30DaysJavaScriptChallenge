@@ -10,6 +10,7 @@ This repository contains code for the 30DaysJavaScriptChallenges and challenges 
 ## Day 4:[Loops](https://github.com/DarshanParhyar/30DaysJavaScriptChallenge/tree/main/Day-4)
 ## Day 5:[Functions](https://github.com/DarshanParhyar/30DaysJavaScriptChallenge/tree/main/Day-5)
 ## Day 6:[Arrays](https://github.com/DarshanParhyar/30DaysJavaScriptChallenge/tree/main/Day-6)
+## Day 6:[Objects](https://github.com/DarshanParhyar/30DaysJavaScriptChallenge/tree/main/Day-7)
 
 
 
