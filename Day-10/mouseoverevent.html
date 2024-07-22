@@ -1,0 +1,21 @@
+<!--Task 3: Add a mouseover event listener to an element that changes its background color.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events</title>
+</head>
+<body>
+  <div id="hoverElement" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+  
+  <script>
+    const hoverElement = document.getElementById('hoverElement');
+
+    hoverElement.addEventListener('mouseover', () => {
+      hoverElement.style.backgroundColor = 'lightcoral';
+    });
+  </script>
+</body>
+</html>

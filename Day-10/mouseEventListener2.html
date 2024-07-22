@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events</title>
+</head>
+<body>
+  <div id="hoverElement" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+  
+  <script>
+    const hoverElement = document.getElementById('hoverElement');
+
+    hoverElement.addEventListener('mouseout', () => {
+      hoverElement.style.backgroundColor = 'lightblue';
+    });
+  </script>
+</body>
+</html>
+
+<!-- Task 4: Add a mouseout event listener to an element that resets its background color.-->

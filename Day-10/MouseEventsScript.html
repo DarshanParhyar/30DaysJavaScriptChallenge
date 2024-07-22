@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Script</title>
+</head>
+<body>
+  <div id="mouseElement" style="width: 200px; height: 200px; background-color: lightgray;"></div>
+  
+  <script>
+    const mouseElement = document.getElementById('mouseElement');
+
+    mouseElement.addEventListener('mouseover', () => {
+      mouseElement.style.backgroundColor = 'lightgreen';
+    });
+
+    mouseElement.addEventListener('mouseout', () => {
+      mouseElement.style.backgroundColor = 'lightgray';
+    });
+  </script>
+</body>
+</html>

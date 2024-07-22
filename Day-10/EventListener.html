@@ -1,0 +1,33 @@
+<!--Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation</title>
+</head>
+<body>
+  <div id="parent">
+    <button id="addChildBtn">Add Child</button>
+  </div>
+  
+  <script>
+    const parent = document.getElementById('parent');
+    const addChildBtn = document.getElementById('addChildBtn');
+
+    addChildBtn.addEventListener('click', () => {
+      const newChild = document.createElement('div');
+      newChild.textContent = 'New Child';
+      newChild.className = 'child';
+      parent.appendChild(newChild);
+    });
+
+    parent.addEventListener('click', (event) => {
+      if (event.target.className === 'child') {
+        console.log('Clicked on:', event.target.textContent);
+      }
+    });
+  </script>
+</body>
+</html>

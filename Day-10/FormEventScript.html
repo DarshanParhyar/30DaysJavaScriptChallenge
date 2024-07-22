@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Events Script</title>
+</head>
+<body>
+  <form id="exampleForm">
+    <input type="text" name="name" placeholder="Name">
+    <select name="options" id="exampleSelect">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formSelectValue"></p>
+  
+  <script>
+    const exampleForm = document.getElementById('exampleForm');
+    const exampleSelect = document.getElementById('exampleSelect');
+    const formSelectValue = document.getElementById('formSelectValue');
+
+    exampleForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(exampleForm);
+      formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+      });
+    });
+
+    exampleSelect.addEventListener('change', () => {
+      formSelectValue.textContent = `Selected: ${exampleSelect.value}`;
+    });
+  </script>
+</body>
+</html>

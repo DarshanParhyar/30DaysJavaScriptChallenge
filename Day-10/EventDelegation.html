@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation Script</title>
+</head>
+<body>
+  <div id="parentElement">
+    <button id="addChildElementBtn">Add Child Element</button>
+  </div>
+  
+  <script>
+    const parentElement = document.getElementById('parentElement');
+    const addChildElementBtn = document.getElementById('addChildElementBtn');
+
+    addChildElementBtn.addEventListener('click', () => {
+      const newChildElement = document.createElement('div');
+      newChildElement.textContent = 'New Child Element';
+      newChildElement.className = 'childElement';
+      parentElement.appendChild(newChildElement);
+    });
+
+    parentElement.addEventListener('click', (event) => {
+      if (event.target.className === 'childElement') {
+        console.log('Clicked on:', event.target.textContent);
+      }
+    });
+  </script>
+</body>
+</html>

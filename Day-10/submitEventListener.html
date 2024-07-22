@@ -1,0 +1,30 @@
+<!--Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Events</title>
+</head>
+<body>
+  <form id="sampleForm">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+    const form = document.getElementById('sampleForm');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+      });
+    });
+  </script>
+</body>
+</html>

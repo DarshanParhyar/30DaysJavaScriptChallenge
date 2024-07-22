@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Event Script</title>
+</head>
+<body>
+  <button id="clickBtn">Click me</button>
+  <p id="clickText">This is a paragraph.</p>
+  
+  <script>
+    const clickBtn = document.getElementById('clickBtn');
+    const clickText = document.getElementById('clickText');
+
+    clickBtn.addEventListener('click', () => {
+      clickText.textContent = 'The button was clicked!';
+    });
+  </script>
+</body>
+</html>
